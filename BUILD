@@ -5,6 +5,8 @@ helm_release(
     chart = "//charts/test-chart:chart",
     release_name = "test-release-1",
     values_yaml = "//:test_chart_values.yaml",
+    namespace = "default",
+    context = "kubernetes-admin@kubernetes",
 )
 
 helm_release(
@@ -12,6 +14,8 @@ helm_release(
     chart = "//charts/test-chart:chart",
     release_name = "test-release-2",
     values_yaml = "//:test_chart_values.yaml",
+    namespace = "default",
+    context = "docker-for-desktop",
 )
 
 helm_release(
